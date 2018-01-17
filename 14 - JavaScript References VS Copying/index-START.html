@@ -11,8 +11,16 @@
 
     // Let's say we have an array
     const players = ['Wes', 'Sarah', 'Ryan', 'Poppy'];
+      
+//    const newPlayers = [...players];
+    const newPlayers = Object.assign([], players);
 
-    // and we want to make a copy of it.
+    // and we want to make a copy of it
+      
+      players.push('Bevo');
+      
+      console.log('players ', players)
+      console.log('newPlayers ', newPlayers);
 
     // You might think we can just do something like this:
 
@@ -41,6 +49,13 @@
       name: 'Wes Bos',
       age: 80
     };
+      
+    const newPerson = Object.assign({}, person);
+      
+      person.team = 'Yello';
+      
+      console.log('person ', person)
+      console.log('newPerson ', newPerson)
 
     // and think we make a copy:
 
